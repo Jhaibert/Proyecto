@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	Arreglos()
+
+}
+
+func Arreglos() {
+
+	con := []string{"a", "a", "c", "c", "s", "x", "x", "x", "x", "a"}
+	var salvados []string
+	for i := 0; i < len(con); i++ {
+
+		if con[i] == con[i+1] {
+			salvados = append(salvados, con[i]+con[i+1])
+
+			fmt.Println(salvados)
+		}
+	}
+
+}
