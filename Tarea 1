@@ -1,0 +1,31 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	resultado := polindrome()
+	println(resultado)
+}
+
+func polindrome() bool {
+	var (
+		igual, aux int
+		palabra    string
+	)
+	fmt.Print("Ingrese la palabra a evaluar: ")
+	fmt.Scanln(&palabra)
+	valor := palabra
+	for l := len(valor) - 1; l >= 0; l-- {
+		if valor[l] == valor[aux] {
+			igual++
+		}
+		aux++
+	}
+	if len(valor) == igual {
+		return true
+	} else {
+		return false
+	}
+}
