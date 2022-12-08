@@ -1,0 +1,26 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	Palabra()
+}
+
+func Palabra() {
+	frase := bufio.NewScanner(os.Stdin)
+	var (
+		Busca string
+	)
+
+	fmt.Println("Ingrese una palabra")
+	fmt.Scanln(&Busca)
+	fmt.Print("Ingrese la palabra a evaluar: ")
+	frase.Scan()
+
+	fmt.Println(strings.Contains(frase.Text(), Busca))
+}
